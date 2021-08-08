@@ -2,19 +2,52 @@
 <html lang="es">
     <head>
         <title>David Caballero Calvo</title>
-        <link rel="icon" type="image/png" href="img/bola.png">
+        <link rel="icon" type="image/png" href="img/favicon.png">
         <meta charset="UTF-8">
         <meta name="title" content="David Caballero Calvo">
         <meta name="description" content="">
 
         <script src="libs/jquery-3.2.1/jquery-latest.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,400,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <meta name="viewport" content= "width=device-width, user-scalable=no">
 
-        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+        <link id="link-css" href="css/index.css" rel="stylesheet" type="text/css"/>
         <script src="js/index.js"></script>
     </head>
   <body>
-      <h1>David Caballero Calvo</h1>
+        <div class="header-desktop">
+            <div class="item-header">
+                <img id="icono-header" src="img/favicon.png" alt="David Caballero">
+            </div>
+            <div class="item-header"><a href="#sobre-mi">Sobre mi</a></div>
+            <div class="item-header">Proyectos personales</div>
+            <div class="item-header">Experiencia profesional</div>
+            <div class="item-header">Conocimientos</div>
+            <div class="item-header">
+                <div class="btn-cambio-fondo">
+                    <img src="img/dark-icon.png" alt="Cambiar fondo">
+                </div>
+            </div>
+        </div>
+        <div class="header-movil">
+            <div id="btn-menu" class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+            <div class="btn-cambio-fondo">
+                <img src="img/dark-icon.png" alt="Cambiar fondo">
+            </div>
+        </div>
+        <div class="menu-desplegable">
+            <div class="item-header">Sobre mi</div>
+            <div class="item-header">Proyectos personales</div>
+            <div class="item-header">Experiencia profesional</div>
+            <div class="item-header">Conocimientos</div>
+        </div>
+        <div id="sobre-mi" class="seccion-info">
+
+        </div>
+        <h1>David Caballero Calvo</h1>
   </body>
 </html>
