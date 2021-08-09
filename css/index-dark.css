@@ -1,13 +1,13 @@
 body {
-    background-color: rgb(29, 29, 32);
+    background-color: #121212;
     font-family: 'Roboto', sans-serif;
-    color: #dfdfdf;
+    color: #d9d9d9;
     padding: 0;
     margin: 0;
 }
 
 a {
-    color: #dfdfdf;
+    color: #d9d9d9;
     cursor: pointer;
     text-decoration: none;
 }
@@ -27,6 +27,10 @@ a {
     cursor: pointer;
 }
 
+.item-header:hover {
+    text-decoration: underline;
+}
+
 .item-header img {
     width: 50px;
 }
@@ -34,7 +38,7 @@ a {
 .btn-cambio-fondo img {
     width: 25px;
     margin-top: 5px;
-    opacity: 0.7;
+    opacity: 0.9;
     cursor: pointer;
 }
 
@@ -44,6 +48,83 @@ a {
 
 .menu-desplegable {
     display: none;
+}
+
+.seccion-info {
+    width: 90%;
+    max-width: 1000px;
+    min-height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08); 
+    box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08);
+    margin-top: 140px;
+    padding: 10px;
+    text-align: center;
+}
+
+.img-perfil {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 100px;
+    border: 1px solid #bb86fc;
+    background-color: #1e1e1e;
+    margin-top: -330px;
+    margin-bottom: 240px;
+}
+
+.titulo {
+    width: 100%;
+    margin-top: 90px;
+    text-align: center;
+}
+
+.subtitulo {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.box-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.email {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.email img {
+    width: 24px;
+    opacity: 0.9;
+    margin-right: 10px;
+}
+
+.titulo-seccion {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.parrafo-seccion {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -66,13 +147,30 @@ a {
         display: none;
         width: calc(100% - 20px);
         position: absolute;
-        background-color: rgb(29, 29, 32);
+        background-color: #121212;
         padding: 10px;
+        padding-bottom: 20px;
         text-align: center;
     }
 
     .menu-desplegable .item-header {
         padding: 10px;
+    }
+
+    .img-perfil {
+        width: 120px;
+        height: 120px;
+        margin-top: -280px;
+        margin-bottom: 200px;
+    }
+
+    .seccion-info {
+        margin-top: 80px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        margin-top: 70px;
     }
 
     /* ANIMACION HAMBURGUESA */
@@ -94,7 +192,7 @@ a {
     .bar {
         position: relative;
         transform: translateY(25px);
-        background: white;
+        background: #d9d9d9;
         transition: all 0ms 300ms;
     }
     .bar.animate {
@@ -106,7 +204,7 @@ a {
         position: absolute;
         left: 0;
         bottom: 10px;
-        background: white;
+        background: #d9d9d9;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     
@@ -115,7 +213,7 @@ a {
         position: absolute;
         left: 0;
         top: 10px;
-        background: white;
+        background: #d9d9d9;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     
