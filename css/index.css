@@ -125,6 +125,64 @@ a {
     padding: 10px;
 }
 
+.seccion-experiencia {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.box-experiencia {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.columna-principal {
+    width: 20%;
+    padding: 10px;
+    text-align: left;
+}
+
+.columna-secundaria {
+    width: 80%;
+    padding: 10px;
+}
+
+.skills-experiencia {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.skills-experiencia img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.seccion-proyectos {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 10px;
+}
+
+.box-proyecto {
+    width: auto;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08); 
+    box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08);
+}
+
 @media (max-width: 768px) {
     .header-desktop {
         display: none;
@@ -169,6 +227,24 @@ a {
     .titulo {
         font-size: 24px;
         margin-top: 70px;
+    }
+
+    .box-experiencia {
+        display: block;
+    }
+
+    .columna-principal {
+        width: auto;
+        text-align: center;
+    }
+    
+    .columna-secundaria {
+        width: auto;
+        margin-top: -40px;
+    }
+
+    .skills-experiencia {
+        justify-content: center;
     }
 
     /* ANIMACION HAMBURGUESA */
