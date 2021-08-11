@@ -72,6 +72,10 @@ a {
     background-color: #ffffff;
     margin-top: -330px;
     margin-bottom: 240px;
+    background-image: url('../img/perfil.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .titulo {
@@ -205,6 +209,10 @@ a {
     margin: 0 auto;
     margin-top: 10px;
     border: 1px solid #121212;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .titulo-proyecto {
@@ -214,6 +222,10 @@ a {
     line-height: 20px;
     text-align: center;
     margin-bottom: -10px;
+}
+
+.titulo-proyecto:hover {
+    text-decoration: underline;
 }
 
 .descripcion-proyecto {
@@ -231,11 +243,19 @@ a {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .tecnologias-proyecto img {
     width: 25px;
-    margin: 10px;
+    margin: 6px;
+}
+
+.seccion-conocimientos {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 10px;
 }
 
 .footer {
@@ -297,7 +317,7 @@ a {
     }
 
     .seccion-info {
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .titulo {
@@ -379,4 +399,28 @@ a {
         transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     /* FIN ANIMACION HAMBURGUESA */
+}
+
+#img-grupetapp {
+    background-image: url('../img/grupetapp.png');
+}
+
+#img-tarot {
+    background-image: url('../img/tarot.png');
+}
+
+#img-felix {
+    background-image: url('../img/felix.png');
+}
+
+#img-crousser {
+    background-image: url('../img/crousser.png');
+}
+
+#img-acw {
+    background-image: url('../img/acw.png');
+}
+
+#img-gaming {
+    background-image: url('../img/gaming.png');
 }
