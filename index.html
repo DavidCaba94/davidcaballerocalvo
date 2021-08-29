@@ -16,15 +16,16 @@
         <link id="link-css" href="css/index.css" rel="stylesheet" type="text/css"/>
         <script src="js/index.js"></script>
     </head>
-  <body>
+    <body>
         <div class="header-desktop">
             <div class="item-header">
-                <img id="icono-header" src="img/fav.png" alt="David Caballero">
+                <a href="#"><img id="icono-header" src="img/fav.png" alt="David Caballero"></a>
             </div>
             <div class="item-header"><a href="#sobre-mi">Sobre mi</a></div>
             <div class="item-header"><a href="#proyectos-personales">Proyectos personales</a></div>
             <div class="item-header"><a href="#experiencia-profesional">Experiencia profesional</a></div>
             <div class="item-header"><a href="#conocimientos">Skills</a></div>
+            <div class="item-header"><a href="#contacto">Contacto</a></div>
             <div class="item-header">
                 <div class="btn-cambio-fondo">
                     <img src="img/dark-icon.png" alt="Cambiar fondo">
@@ -35,6 +36,9 @@
             <div id="btn-menu" class="hamburger-menu">
                 <div class="bar"></div>
             </div>
+            <div class="item-header-movil">
+                <a href="#"><img id="icono-header-movil" src="img/fav.png" alt="David Caballero"></a>
+            </div>
             <div class="btn-cambio-fondo">
                 <img src="img/dark-icon.png" alt="Cambiar fondo">
             </div>
@@ -44,6 +48,7 @@
             <div class="item-header"><a href="#proyectos-personales">Proyectos personales</a></div>
             <div class="item-header"><a href="#experiencia-profesional">Experiencia profesional</a></div>
             <div class="item-header"><a href="#conocimientos">Skills</a></div>
+            <div class="item-header"><a href="#contacto">Contacto</a></div>
         </div>
         <div id="sobre-mi" class="seccion-info">
             <h1 class="titulo">David Caballero Calvo</h1>
@@ -202,7 +207,7 @@
                 </div>
                 <div class="columna-secundaria">
                     <p><strong>UNDANET</strong></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Desarrollo de un proyecto con la primera versión de Angular utilizando también conocimientos de CSS y JavaScript. Posteriormente desarrollo de otro proyecto con Angular 2 y TypeScript, además de la librería de Angular Material para el diseño y mis conocimientos de CSS.</p>
                     <div class="skills-experiencia">
                         <img src="img/angular.png" alt="Angular" title="Angular">
                         <img src="img/ts.png" alt="TypeScript" title="TypeScript">
@@ -221,7 +226,7 @@
                 </div>
                 <div class="columna-secundaria">
                     <p><strong>SIMAC MUNDO DIGITAL</strong></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Prácticas orientadas a Frontend con proyectos en diversas tecnologías. Realicé y modifiqué varias webs de clientes montadas con Joomla y profundicé en tecnologías como PHP mediante framworks como Laravel para un proyecto interno de la empresa.</p>
                 </div>
             </div>
             <div class="separador"></div>
@@ -232,7 +237,7 @@
                 </div>
                 <div class="columna-secundaria">
                     <p><strong>INDRA</strong></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Prácticas en el proyecto de Telefónica resolviendo incidencias de clientes mediante sentencias SQL en base de datos. Todo ello siguiendo las instrucciones de las operativas detalladas en la documentación del proyecto.</p>
                 </div>
             </div>
         </div>
@@ -266,8 +271,14 @@
                 <img src="img/sourcetree.png" alt="Sourcetree" title="Sourcetree">
             </div>
         </div>
-        <div class="footer">
-            <img src="img/fav.png">
+        <div id="contacto" class="seccion-contacto">
+            <p class="titulo-seccion">Contacto</p>
+            <input class="input-email" type="email" placeholder="Email">
+            <textarea class="input-mensaje" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" maxlength="1000"></textarea>
+            <div class="btn-enviar">Enviar</div>
         </div>
-  </body>
+        <div class="footer">
+            <a href="#"><img src="img/fav.png"></a>
+        </div>
+    </body>
 </html>

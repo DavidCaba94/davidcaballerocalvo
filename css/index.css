@@ -27,6 +27,11 @@ a {
     cursor: pointer;
 }
 
+.item-header-movil img {
+    width: 30px;
+    margin-left: -23px;
+}
+
 .item-header:hover {
     text-decoration: underline;
 }
@@ -284,6 +289,47 @@ a {
     width: 30px;
     margin: 0 auto;
     margin-top: 25px;
+}
+
+.seccion-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+.input-email {
+    width: 88%;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid #1e1e1e3a;
+    border-radius: 5px;
+    padding: 0px 20px;
+    outline: 0;
+}
+
+.input-mensaje {
+    width: 88%;
+    min-height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid #1e1e1e3a;
+    border-radius: 5px;
+    padding: 20px;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-enviar {
+    width: 170px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #121212;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
