@@ -332,6 +332,20 @@ a {
     cursor: pointer;
 }
 
+.msg-error {
+    display: none;
+    width: auto;
+    margin: 10px;
+    color: #ff6e6e;
+}
+
+.msg-success {
+    display: none;
+    width: auto;
+    margin: 10px;
+    color: #49ce6b;
+}
+
 @media (max-width: 768px) {
     .header-desktop {
         display: none;

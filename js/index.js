@@ -32,4 +32,33 @@ $(document).ready(function(){
         $('.bar').toggleClass('animate');
 	    $('.menu-desplegable').slideToggle();
 	});
+
+    $('.btn-enviar').on('click', function() {
+        enviarEmailContacto();
+	});
 });
+
+function enviarEmailContacto() {
+    $('.msg-success').css("display", "none");
+    if($('#email').val() !== '' && $('#mensaje').val() !== '') {
+        $('.msg-error').css("display", "none");
+        $.ajax({
+            url: '../email/mail.php',
+            dataType: 'json',
+            data: ({email: $('#email').val(), mensaje: $('#mensaje').val()}),
+            success: function(data) {
+                if(data.status == 200){
+                    console.log("Email enviado");
+                    $('.msg-success').css("display", "block");
+                    $('#email').val('');
+                    $('#mensaje').val('');
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    } else {
+        $('.msg-error').css("display", "block");
+    }
+}
