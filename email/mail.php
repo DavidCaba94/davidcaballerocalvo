@@ -1,8 +1,4 @@
 <?php
-include_once 'conexion.php';
-$objeto = new Conexion();
-$conexion = $objeto->Conectar();
-
 $_POST = json_decode(file_get_contents("php://input"), true);
 
 $email = $_GET['email'];

@@ -346,6 +346,13 @@ a {
     color: #49ce6b;
 }
 
+.msg-sending {
+    display: none;
+    width: auto;
+    margin: 10px;
+    color: #121212;
+}
+
 @media (max-width: 768px) {
     .header-desktop {
         display: none;
