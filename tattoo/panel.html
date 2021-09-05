@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Panel - Tattoo</title>
+        <link rel="icon" type="image/png" href="img/fav-color.png">
+        <meta charset="UTF-8">
+        <meta name="title" content="Panel - Tattoo">
+        <meta name="description" content="">
+
+        <script src="../libs/jquery-3.2.1/jquery-latest.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
+
+        <link id="link-css" href="css/panel.css" rel="stylesheet" type="text/css"/>
+        <script src="js/panel.js"></script>
+    </head>
+    <body>
+        <div class="box-panel">
+            <p class="titulo-panel">Subir imagen</p>
+            <img class="upload-image" src="img/default-image.png">
+            <input type="file" name="imagen" id="imagen" class="image-input" accept=".png,.jpg,.jpeg,.pjpeg,.gif">
+            <div class="box-estilos">
+                <p>
+                    <input type="radio" id="blackwork" name="estilo" value="blackwork">
+                    <label for="blackwork">Blackwork</label>
+                </p>
+                <p>
+                    <input type="radio" id="minimalista" name="estilo" value="minimalista">
+                    <label for="minimalista">Minimalista</label>
+                </p>
+                <p>
+                    <input type="radio" id="tradicional" name="estilo" value="tradicional">
+                    <label for="tradicional">Tradicional</label>
+                </p>
+                <p>
+                    <input type="radio" id="neotradicional" name="estilo" value="neotradicional">
+                    <label for="neotradicional">Neotradicional</label>
+                </p>
+                <p>
+                    <input type="radio" id="dotwork" name="estilo" value="dotwork">
+                    <label for="dotwork">Dotwork</label>
+                </p>
+                <p>
+                    <input type="radio" id="blackgrey" name="estilo" value="blackgrey">
+                    <label for="blackgrey">Black & Gray</label>
+                </p>
+                <p>
+                    <input type="radio" id="acuarela" name="estilo" value="acuarela">
+                    <label for="acuarela">Acuarela</label>
+                </p>
+                <p>
+                    <input type="radio" id="japones" name="estilo" value="japones">
+                    <label for="japones">Japonés</label>
+                </p>
+                <p>
+                    <input type="radio" id="realista" name="estilo" value="realista">
+                    <label for="realista">Realista</label>
+                </p>
+                <p>
+                    <input type="radio" id="ornamental" name="estilo" value="ornamental">
+                    <label for="ornamental">Ornamental</label>
+                </p>
+                <p>
+                    <input type="radio" id="tribal" name="estilo" value="tribal">
+                    <label for="tribal">Tribal</label>
+                </p>
+                <p>
+                    <input type="radio" id="gotico" name="estilo" value="gotico">
+                    <label for="gotico">Gótico</label>
+                </p>
+                <p>
+                    <input type="radio" id="otro" name="estilo" value="otro" checked>
+                    <label for="otro">Otro</label>
+                </p>
+            </div>
+            <div class="btn-image">Guardar</div>
+        </div>
+        <div class="box-panel">
+            <p class="titulo-panel">Ajustes de galería</p>
+        </div>
+    </body>
+</html>

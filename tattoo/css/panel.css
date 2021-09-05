@@ -1,0 +1,126 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    color: #121212;
+    padding: 10px;
+    margin: 0;
+}
+
+.box-panel {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08); 
+    box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.titulo-panel {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.upload-image {
+    width: 250px;
+}
+
+.image-input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.text-estilo {
+    text-decoration: underline;
+}
+
+.box-estilos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.btn-image {
+    width: 90px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #9d37ec;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08); 
+    box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08);
+    color: #ffffff;
+    padding: 10px;
+}
+
+.btn-image:hover {
+    background-color: #7f35b8;
+    cursor: pointer;
+}
+
+/*CUSTOM RADIO*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #121212;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #9d37ec;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/*FIN CUSTOM RADIO*/
+
+@media (max-width: 768px) {
+    .box-panel:first-child {
+        margin-top: 0px;
+    }
+}
