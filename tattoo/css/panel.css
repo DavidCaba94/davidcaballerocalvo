@@ -66,6 +66,38 @@ body {
     cursor: pointer;
 }
 
+.flex-fotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.miniatura-foto {
+    width: 130px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.eliminar-foto {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    background-image: url('../img/delete-gris.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+    margin-left: 95px;
+    margin-top: 145px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08); 
+    box-shadow: 1px 5px 25px 1px rgba(0,0,0,0.08);
+}
+
 /*CUSTOM RADIO*/
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {

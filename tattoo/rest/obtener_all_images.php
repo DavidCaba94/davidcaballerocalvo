@@ -1,8 +1,9 @@
 <?php
 require 'Images.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $users = Users::getAllImages();
-    if ($users) {
+    $dominio = $_GET['dominio'];
+    $images = Images::getAllImages($dominio);
+    if ($images) {
         $datos["estado"] = "1";
         $datos["images"] = $images;
         print json_encode($datos);
