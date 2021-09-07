@@ -1,4 +1,5 @@
 var urlImagen, estiloImagen = 'Otro';
+var idFinalEliminar = 0;
 $(document).ready(function(){
     getAllImages();
     $("#imagen").change(function(){
@@ -12,6 +13,15 @@ $(document).ready(function(){
     $("input[name=estilo]").click(function () {
         estiloImagen = $(this).val();
     });
+
+    $(".btn-si").on('click', function() {
+        $('.box-popup').css('display', 'none');
+        eliminarImagen(idFinalEliminar);
+    });
+    
+    $(".btn-no").on('click', function() {
+        $('.box-popup').css('display', 'none');
+    });
 });
 
 function getAllImages() {
@@ -21,16 +31,15 @@ function getAllImages() {
         dataType: 'json',
         data: ({dominio: 'davidcaballerocalvo.es'}),
         success: function(data) {
-            console.log(data.images);
             for(var i=0; i<data.images.length; i++) {
                 $(".flex-fotos").append(''+
                     '<div class="miniatura-foto" style="background-image: url(../tattoo/rest/images/' + data.images[i].url + ')">'+
-                        '<div class="eliminar-foto"></div>'+
+                        '<div class="eliminar-foto" onclick="confirmarEliminacion(' + data.images[i].id + ')"></div>'+
                     '</div>');
             }
         },
         error: function(error) {
-            console.log(error);
+            showErrorNotification('Error al obtener imagenes');
         }
     });
 }
@@ -58,11 +67,11 @@ function guardarImagen() {
                 urlImagen = response.split('/')[1];
                 guardarRegistroBD();
             } else {
-                alert('Error en la subida');
+                showErrorNotification('Error al cargar la imagen');
             }
         },
         error: function(error) {
-            console.log(error);
+            showErrorNotification('Error al cargar la imagen');
         }
     });
     return false;
@@ -81,15 +90,57 @@ function guardarRegistroBD() {
         }),
         success: function(data) {
             if(data.estado == 1){
+                showSuccessNotification('Imagen guardada');
                 getAllImages();
+                $(".upload-image").attr("src", "../tattoo/img/default-image.png");
+                $("#otro").prop("checked", true);
             } else {
-                alert('Error al guardar el registro');
+                showErrorNotification('Error al guardar la imagen');
             }
         },
         error: function(error) {
-            console.log(error);
+            showErrorNotification('Error al guardar la imagen');
         }
   });
+}
+
+function confirmarEliminacion(id) {
+    $('.box-popup').css('display', 'flex');
+    idFinalEliminar = id;
+}
+
+function eliminarImagen(id) {
+    $.ajax({
+		type: 'POST',
+		url: '../tattoo/rest/eliminar_imagen.php',
+		dataType: 'json',
+		data: ({id: id}),
+		success: function(data) {
+			if(data.estado == 1){
+                getAllImages();
+                showSuccessNotification('Imagen Eliminada');
+			} else {
+				showErrorNotification('Error al eliminar la imagen');
+			}
+		},
+		error: function(error) {
+			showErrorNotification('Error al eliminar la imagen');
+		}
+	});
+}
+
+function showSuccessNotification(texto) {
+    $("#snackbar-success").text(texto);
+    var x = document.getElementById("snackbar-success");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function showErrorNotification(texto) {
+    $("#snackbar-error").text(texto);
+    var x = document.getElementById("snackbar-error");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 const toBase64 = file => new Promise((resolve, reject) => {

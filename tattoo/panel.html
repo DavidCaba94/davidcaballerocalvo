@@ -14,6 +14,7 @@
         <meta name="viewport" content= "width=device-width, user-scalable=no">
 
         <link id="link-css" href="css/panel.css" rel="stylesheet" type="text/css"/>
+        <link id="link-css" href="css/snackbar.css" rel="stylesheet" type="text/css"/>
         <script src="js/panel.js"></script>
     </head>
     <body>
@@ -86,5 +87,21 @@
                 <!-- LISTADO DE IMAGENES CARGADAS -->
             </div>
         </div>
+        <!-- POPUP ELIMINAR -->
+        <div class="box-popup">
+            <div class="popup-eliminar">
+                <p>¿Deseas eliminar esta imagen?</p>
+                <div class="flex-btns-popup">
+                    <div class="btn-si">SI</div>
+                    <div class="btn-no">NO</div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN POPUP ELIMINAR -->
+        <!-- SNACKBAR -->
+        <div id="snackbar-success">Imagen guardada</div>
+        <div id="snackbar-error">Algo ha salido mal</div>
+        <!-- FIN SNACKBAR -->
+        <p class="powered-link">Powered by <a href="https://davidcaballerocalvo.es" target="_blank">David Caballero Calvo</a></p>
     </body>
 </html>

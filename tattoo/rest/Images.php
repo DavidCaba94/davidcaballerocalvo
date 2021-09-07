@@ -6,7 +6,7 @@ class Images
     {
     }
     public static function getAllImages($dominio){
-        $consulta = "SELECT * FROM images WHERE dominio = '$dominio'";
+        $consulta = "SELECT * FROM images WHERE dominio = '$dominio' ORDER BY id DESC";
         try {
             $comando = Database::getInstance()->getDb()->prepare($consulta);
             $comando->execute();
@@ -26,6 +26,11 @@ class Images
         return $sentencia->execute(
             array($url,$dominio,$tipo,$fecha)
         );
+    }
+    public static function delete($id){
+        $comando = "DELETE FROM images WHERE id=?";
+        $sentencia = Database::getInstance()->getDb()->prepare($comando);
+        return $sentencia->execute(array($id));
     }
 }
 ?>
