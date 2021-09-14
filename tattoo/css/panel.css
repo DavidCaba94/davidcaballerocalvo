@@ -66,6 +66,16 @@ body {
     cursor: pointer;
 }
 
+.btn-guardando {
+    display: none;
+    width: 90px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: #121212;
+    padding: 10px;
+}
+
 .flex-fotos {
     display: flex;
     align-items: center;

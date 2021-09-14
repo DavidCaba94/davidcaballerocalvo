@@ -1,4 +1,4 @@
-var urlImagen, estiloImagen = 'Otro';
+var urlImagen, estiloImagen = 'otro';
 var idFinalEliminar = 0;
 $(document).ready(function(){
     getAllImages();
@@ -53,6 +53,8 @@ async function cargarImagen() {
 }
 
 function guardarImagen() {
+    $(".btn-image").css("display", "none");
+    $(".btn-guardando").css("display", "block");
     var formData = new FormData();
     var files = $('#imagen')[0].files[0];
     formData.append('file',files);
@@ -68,10 +70,14 @@ function guardarImagen() {
                 guardarRegistroBD();
             } else {
                 showErrorNotification('Error al cargar la imagen');
+                $(".btn-image").css("display", "block");
+                $(".btn-guardando").css("display", "none");
             }
         },
         error: function(error) {
             showErrorNotification('Error al cargar la imagen');
+            $(".btn-image").css("display", "block");
+            $(".btn-guardando").css("display", "none");
         }
     });
     return false;
@@ -97,9 +103,13 @@ function guardarRegistroBD() {
             } else {
                 showErrorNotification('Error al guardar la imagen');
             }
+            $(".btn-image").css("display", "block");
+            $(".btn-guardando").css("display", "none");
         },
         error: function(error) {
             showErrorNotification('Error al guardar la imagen');
+            $(".btn-image").css("display", "block");
+            $(".btn-guardando").css("display", "none");
         }
   });
 }
