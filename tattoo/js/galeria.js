@@ -100,6 +100,7 @@ function abrirImagen(idImagen) {
     allImages.forEach(item => {
         if(item.id == idImagen) {
             $("#img-select").attr("src", "../tattoo/rest/images/" + item.url);
+            $(".imagen-seleccionada img").css("max-height", $(document).height() - 150);
         }
     });
 }
