@@ -1,6 +1,7 @@
 var urlImagen, estiloImagen = 'otro';
 var idFinalEliminar = 0;
 $(document).ready(function(){
+    comprobarLogin();
     getAllImages();
     $("#imagen").change(function(){
 		cargarImagen();
@@ -22,7 +23,17 @@ $(document).ready(function(){
     $(".btn-no").on('click', function() {
         $('.box-popup').css('display', 'none');
     });
+
+    $("#cerrar-sesion").on('click', function() {
+        cerrarSesion();
+    });
 });
+
+function comprobarLogin() {
+    if(localStorage.getItem('user') == null || localStorage.getItem('pass') == null) {
+        window.location.href = 'https://davidcaballerocalvo.es/tattoo/login';
+    }
+}
 
 function getAllImages() {
     $(".flex-fotos").html('');
@@ -137,6 +148,13 @@ function eliminarImagen(id) {
 			showErrorNotification('Error al eliminar la imagen');
 		}
 	});
+}
+
+function cerrarSesion() {
+    localStorage.setItem("user", null);
+	localStorage.setItem("pass", null);
+    localStorage.setItem("check", "unchecked");
+    window.location.href = 'https://davidcaballerocalvo.es/tattoo/login';
 }
 
 function showSuccessNotification(texto) {
