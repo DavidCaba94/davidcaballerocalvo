@@ -3,7 +3,8 @@ require 'Users.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $user = $_GET['user'];
     $pass = $_GET['pass'];
-    $users = Users::getUserLogin($user, $pass);
+    $dominio = $_GET['dominio'];
+    $users = Users::getUserLogin($user, $pass, $dominio);
     if ($users) {
         $datos["estado"] = "1";
         $datos["users"] = $users;

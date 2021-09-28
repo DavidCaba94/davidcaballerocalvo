@@ -30,7 +30,7 @@ $(document).ready(function(){
 });
 
 function comprobarLogin() {
-    if(localStorage.getItem('user') == null || localStorage.getItem('pass') == null) {
+    if(localStorage.getItem('user') == null || localStorage.getItem('pass') == null || localStorage.getItem('user') == "null" || localStorage.getItem('pass') == "null") {
         window.location.href = 'https://davidcaballerocalvo.es/tattoo/login';
     }
 }

@@ -10,7 +10,7 @@ function login() {
 	    type: 'GET',
 	    url: '../tattoo/rest/obtener_all_users.php',
 	    dataType: 'json',
-        data: ({user: $("#user").val(), pass: $("#pass").val()}),
+        data: ({user: $("#user").val(), pass: $("#pass").val(), dominio: 'davidcaballerocalvo.es'}),
 	    success: function(data) {
             if(data.users != undefined && data.users[0].user === $("#user").val()) {
 				localStorage.setItem("user", $("#user").val());
