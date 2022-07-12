@@ -483,6 +483,10 @@ a {
     /* FIN ANIMACION HAMBURGUESA */
 }
 
+#img-lafotodeldia {
+    background-image: url('../img/lafotodeldia.png');
+}
+
 #img-grupetapp {
     background-image: url('../img/grupetapp.png');
 }
