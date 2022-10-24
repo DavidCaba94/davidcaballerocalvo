@@ -482,6 +482,9 @@ a {
     }
     /* FIN ANIMACION HAMBURGUESA */
 }
+#img-wikidioses {
+    background-image: url('../img/wikidioses.png');
+}
 
 #img-lafotodeldia {
     background-image: url('../img/lafotodeldia.png');
