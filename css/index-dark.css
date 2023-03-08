@@ -486,6 +486,10 @@ a {
     }
     /* FIN ANIMACION HAMBURGUESA */
 }
+#img-oraculogratis {
+    background-image: url('../img/oraculo.jpg');
+}
+
 #img-wikidioses {
     background-image: url('../img/wikidioses.png');
 }
