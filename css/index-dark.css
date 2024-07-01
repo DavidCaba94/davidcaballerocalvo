@@ -75,8 +75,8 @@ a {
     border-radius: 100px;
     border: 1px solid #bb86fc;
     background-color: #1e1e1e;
-    margin-top: -330px;
-    margin-bottom: 240px;
+    margin-top: -360px;
+    margin-bottom: 280px;
     background-image: url('../img/perfil.png');
     background-position: center;
     background-size: cover;
@@ -398,8 +398,8 @@ a {
     .img-perfil {
         width: 120px;
         height: 120px;
-        margin-top: -280px;
-        margin-bottom: 200px;
+        margin-top: -320px;
+        margin-bottom: 250px;
     }
 
     .seccion-info {
